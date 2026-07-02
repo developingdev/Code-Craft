@@ -39,3 +39,9 @@ yarn-error.log*
 # Database
 /data
 *.db
+
+# App outputs
+apps/frontend/.next/
+apps/backend/dist/
+packages/shared/dist/
+apps/agents/dist/

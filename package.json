@@ -6,10 +6,14 @@
   "workspaces": [
     "apps/frontend",
     "apps/backend",
+    "apps/agents",
     "packages/shared"
   ],
   "scripts": {
     "dev": "turbo run dev",
+    "dev:frontend": "npm run dev --workspace=@code-craft/frontend",
+    "dev:backend": "npm run dev --workspace=@code-craft/backend",
+    "dev:agents": "npm run dev --workspace=@code-craft/agents",
     "build": "turbo run build",
     "start": "turbo run start",
     "test": "turbo run test",
@@ -23,5 +27,6 @@
   },
   "devDependencies": {
     "turbo": "^2.0.0"
-  }
+  },
+  "packageManager": "npm@10.8.2"
 }
