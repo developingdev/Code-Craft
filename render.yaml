@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: code-craft-backend
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build --workspace=@code-craft/backend
+    startCommand: npm run start --workspace=@code-craft/backend
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CORS_ORIGIN
+        value: https://your-frontend-domain.vercel.app
