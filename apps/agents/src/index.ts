@@ -3,7 +3,8 @@ import Anthropic from '@anthropic-ai/sdk';
 
 dotenv.config();
 
-const apiKey = process.env.ANTHROPIC_API_KEY;
+// Support multiple env var names so it's easy to enable in Codespaces or locally.
+const apiKey = process.env.ANTHROPIC_API_KEY || process.env.CODESPACES_ANTHROPIC_API_KEY || process.env.ANTHROPIC_KEY;
 let client: Anthropic | null = null;
 
 if (apiKey) {
